@@ -83,7 +83,7 @@ function get_swap_elem($array, $count){    //выполняет задание
     $nc = 1;
     for($n = 1; $n < count($arrmin); $n += 2){
         if($arrmin[$n] > $maxvel[1]){
-            $arrmin[$n] += $count;
+            $arrmin[$n] += $count; //обновляем индексы элементов, которые стоят после максимума. Это необходимо для последующего удаления. 
         }
         $arr = add_elem($arr, $maxvel[1] + $nc, $arrmin[$n -1]);
     }
